@@ -64,7 +64,7 @@ const ComputerCanvas = () => {
       gl={{ preserveDrawingBuffer: true }}
       className="overflow-visible w-full h-screen"
     >
-      <Suspense fallback={<CanvasLoader />}>
+      <Suspense>
         <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
