@@ -20,8 +20,8 @@ const Computers = ({ device, scale, position }) => {
       <primitive
         object={computer.scene}
         scale={scale}
-        // position={position}
-        // rotation={[-0.01, -0.2, -0.1]}
+        position={position}
+        rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
   );
