@@ -14,7 +14,7 @@ const Hero = () => {
         className={` px-[9%] absolute top-[120px] inset-0 max-w-full mx-auto flex flex-row items-start gap-5 flex-wrap lg:flex-nowrap  `}
       >
         <div className="flex flex-row items-start flex-nowrap gap-5 ">
-          <div className="flex flex-col justify-center items-center mt-5">
+          <div className="flex flex-col justify-center items-center mt-5 xs:hidden sm:flex">
             <div className="w-5 h-5 rounded-full bg-[#915eff]"></div>
             <div className="w-1 sm:h-80  h-40 violet-gradient"></div>
           </div>
