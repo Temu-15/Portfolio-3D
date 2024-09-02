@@ -9,9 +9,9 @@ import { FaLinkedin } from "react-icons/fa6";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto">
+    <section className="relative w-full h-screen mx-auto mt-20 md:mt-0">
       <div
-        className={` px-[9%] absolute top-[120px] inset-0 max-w-full mx-auto flex flex-row items-start gap-5 flex-wrap lg:flex-nowrap  `}
+        className={` px-[9%] max-w-full h-full mx-auto flex flex-row items-center justify-center gap-5 flex-wrap lg:flex-nowrap  `}
       >
         <div className="flex flex-row items-start flex-nowrap gap-5 ">
           <div className="flex flex-col justify-center items-center mt-5 xs:hidden sm:flex">
@@ -70,7 +70,7 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        <ComputerCanvas className="basis-full" />
+        <ComputerCanvas className="" />
       </div>
       <div className="absolute xs:bottom-4 bottom-32 w-full flex justify-center items-center">
         <a

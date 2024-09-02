@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
-import { ScrollArea } from "@radix-ui/react-scroll-area";
-import { experiences, education, skills } from "../constants";
+
+import { experiences, education, technologies } from "../constants";
 import { motion } from "framer-motion";
-import { FaHtml5, FaCss3, FaReact } from "react-icons/fa6";
+
 export default function Experience() {
   const [value, setValue] = useState(0);
 
@@ -22,18 +22,15 @@ export default function Experience() {
       }}
       className="flex justify-center items-center  xl:py-0   py-12 min-h-[80vh]"
     >
-      <section className="container mx-auto px-[9%]">
+      <section className="w-full mx-auto px-[9%]">
         <Box
           sx={{
             display: "flex",
-            flexDirection: { xs: "column", lg: "row" },
+            flexDirection: { xs: "column", md: "row" },
             flexWrap: "nowrap",
             // flexWrap: { xs: "wrap", md: "nowrap" },
             justifyContent: "center",
-            // alignItems: "center",
-            // width: "100%",
-            // height: "100%",
-            gap: 15,
+            gap: 5,
           }}
         >
           <div className="flex flex-col gap-6 max-w-[380px] w-full mx-auto xl:mx-0">
@@ -142,11 +139,11 @@ export default function Experience() {
                             className="bg-[#232329] max-h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                           >
                             <span className="text-[#915eff]">{item.date}</span>
-                            <h3 classNmae="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                            <h3 className="text-xl max-w-[260px] text-center lg:text-left">
                               {item.title}
                             </h3>
                             <div className="flex items-center gap-3">
-                              <span className="w-[6px] h-[6px] rounded-full text-[#915eff]"></span>
+                              <span className="w-[6px] h-[6px] rounded-full bg-[#915eff]"></span>
                               <p className="text-[#fff]/60">
                                 {item.company_name}
                               </p>
@@ -171,8 +168,8 @@ export default function Experience() {
                     </p>
                   </div>
                   <div className="h-[480px] overflow-hidden py-2">
-                    <div className="h-[400px] overflow-auto">
-                      <ul className="grid grid-cols-1 md:grid-cols-2 gap-[30px] text-center xl:text-left">
+                    <div className=" overflow-hidden group hover:overflow-auto">
+                      <ul className="h-[350px] grid grid-cols-1 md:grid-cols-2 gap-[30px] text-center xl:text-left ">
                         {education.map((item, index) => {
                           return (
                             <li
@@ -182,11 +179,11 @@ export default function Experience() {
                               <span className="text-[#915eff]">
                                 {item.date}
                               </span>
-                              <h3 classNmae="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                              <h3 className="text-xl max-w-[260px] text-center lg:text-left">
                                 {item.title}
                               </h3>
                               <div className="flex items-center gap-3">
-                                <span className="w-[6px] h-[6px] rounded-full text-[#915eff]"></span>
+                                <span className="w-[6px] h-[6px] rounded-full inline-block bg-[#915eff]"></span>
                                 <p className="text-[#fff]/60">
                                   {item.institution}
                                 </p>
@@ -212,13 +209,15 @@ export default function Experience() {
                     </p>
                   </div>
                   <div className="h-[480px] overflow-hidden py-2">
-                    <div className="h-[300px] overflow-auto">
-                      <ul className="grid sm:grid-cols-3 md:grid-cols-4 grid-cols-2 xl:gap-[30px] text-center xl:text-left py-2">
-                        {skills.skillSets.map((item, index) => {
+                    <div className="h-[300px] overflow-hidden hover:overflow-auto">
+                      <ul className="grid sm:grid-cols-3 md:grid-cols-4 grid-cols-2 gap-[30px] text-center xl:text-left ">
+                        {technologies.map((item, index) => {
                           return (
                             <li key={index}>
-                              <div className="w-full h-[150px] bg-[#232329] rounded -xl flex items-center justify-center group relative">
-                                {item.icon}
+                              <div className="w-full min-h-[130px] bg-[#232329] rounded-2xl flex items-center justify-center  group">
+                                {item.icon && (
+                                  <item.icon className="text-6xl font-bold text-[#fff] group-hover:text-[#915eff]" />
+                                )}
                               </div>
                             </li>
                           );

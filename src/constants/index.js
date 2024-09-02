@@ -23,11 +23,73 @@ import {
   jobit,
   tripguide,
   threejs,
-  FaHtml5,
-  FaCss3,
-  FaReact,
 } from "../assets";
+import { FaHtml5, FaCss3, FaReact } from "react-icons/fa";
+import { DiJavascript } from "react-icons/di";
+import { SiTypescript } from "react-icons/si";
+import { SiRedux } from "react-icons/si";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { RiNodejsLine } from "react-icons/ri";
+import { SiMongodb } from "react-icons/si";
+import { TbBrandThreejs } from "react-icons/tb";
+import { RxGithubLogo } from "react-icons/rx";
+import { LuFigma } from "react-icons/lu";
+import { FaDocker } from "react-icons/fa";
 
+const technologies = [
+  {
+    name: "HTML 5",
+    icon: FaHtml5,
+  },
+  {
+    name: "CSS 3",
+    icon: FaCss3,
+  },
+  {
+    name: "JavaScript",
+    icon: DiJavascript,
+  },
+  {
+    name: "TypeScript",
+    icon: SiTypescript,
+  },
+  {
+    name: "React JS",
+    icon: FaReact,
+  },
+  {
+    name: "Redux Toolkit",
+    icon: SiRedux,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: RiTailwindCssFill,
+  },
+  {
+    name: "Node JS",
+    icon: RiNodejsLine,
+  },
+  {
+    name: "MongoDB",
+    icon: SiMongodb,
+  },
+  {
+    name: "Three JS",
+    icon: TbBrandThreejs,
+  },
+  {
+    name: "git",
+    icon: RxGithubLogo,
+  },
+  {
+    name: "figma",
+    icon: LuFigma,
+  },
+  {
+    name: "docker",
+    icon: FaDocker,
+  },
+];
 export const navLinks = [
   {
     id: "about",
@@ -69,61 +131,6 @@ const services = [
     num: "04",
     title: "ThreeJs Specialist",
     description: "creating 3d websites with multiple components ",
-  },
-];
-
-const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
   },
 ];
 
