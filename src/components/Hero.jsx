@@ -6,6 +6,7 @@ import { FaFacebook } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
+import AnimatePage from "./AnimatePage";
 
 const Hero = () => {
   return (
@@ -70,7 +71,7 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        <ComputerCanvas className="" />
+        <ComputerCanvas className="z-0" />
       </div>
       <div className="absolute xs:bottom-4 bottom-32 w-full flex justify-center items-center">
         <a
@@ -79,7 +80,11 @@ const Hero = () => {
         >
           <motion.dev
             animate={{ y: [0, 24, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
             className="w-3 h-3 rounded-full mb-1 bg-secondary"
           />
         </a>

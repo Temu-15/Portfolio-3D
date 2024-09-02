@@ -226,62 +226,7 @@ const skills = {
   title: "my skills",
   description:
     "my skills description for the web development project for the website project at https:// website. Ember.com",
-  skillSets: [
-    {
-      name: "React",
-      icon: "FaReact",
-      color: "blue-text-gradient",
-      level: 80,
-    },
-    // {
-    //   name: "Redux",
-    //   icon: redux,
-    //   color: "blue-text-gradient",
-    //   level: 85,
-    // },
-    {
-      name: "HTML",
-      icon: "FaHtml5",
-      color: "blue-text-gradient",
-      level: 90,
-    },
-    {
-      name: "CSS",
-      icon: "FaCss3",
-      color: "blue-text-gradient",
-      level: 95,
-    },
-    // {
-    //   name: "JavaScript",
-    //   icon: javascript,
-    //   color: "blue-text-gradient",
-    //   level: 90,
-    // },
-    // {
-    //   name: "TypeScript",
-    //   icon: typescript,
-    //   color: "blue-text-gradient",
-    //   level: 85,
-    // },
-    // {
-    //   name: "Node.js",
-    //   icon: nodejs,
-    //   color: "blue-text-gradient",
-    //   level: 90,
-    // },
-    // {
-    //   name: "MongoDB",
-    //   icon: mongodb,
-    //   color: "blue-text-gradient",
-    //   level: 80,
-    // },
-    // {
-    //   name: "Three.js",
-    //   icon: threejs,
-    //   color: "blue-text-gradient",
-    //   level: 75,
-    // },
-  ],
+ 
 };
 
 const testimonials = [

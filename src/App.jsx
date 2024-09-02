@@ -1,4 +1,5 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import {
   About,
   Contact,
@@ -11,6 +12,7 @@ import {
   Tech,
   Services,
 } from "./components";
+import AnimatePage from "./components/AnimatePage";
 
 function App() {
   return (
@@ -20,7 +22,20 @@ function App() {
           <Navbar />
           <Hero />
         </div>
-        <Services />
+
+        <AnimatePresence>
+          <Routes>
+            <Route
+              path="/services"
+              element={
+                <AnimatePage>
+                  <Services />
+                </AnimatePage>
+              }
+            />
+          </Routes>
+        </AnimatePresence>
+
         <Experience />
         <About />
         <Tech />
