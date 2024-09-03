@@ -65,7 +65,7 @@ const Hero = () => {
             </div>
             <a
               href="mailto:tamasgenfiqaadu@gmail.com"
-              class="btn px-[20px] py-2  rounded-3xl  bg-[#195eff] inline-block text-[20px]"
+              className="btn px-[20px] py-2  rounded-3xl  bg-[#195eff] inline-block text-[20px]"
             >
               Contact me
             </a>
@@ -78,7 +78,7 @@ const Hero = () => {
           href="#about"
           className="w-[35px] h-[60px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2"
         >
-          <motion.dev
+          <motion.div
             animate={{ y: [0, 24, 0] }}
             transition={{
               duration: 1.5,
