@@ -22,6 +22,18 @@ export default function Card({ title, link, imgSrc }) {
       setIsCardOpened(false);
     }
   };
+
+  const handleTouchStart = (event) => {
+    startY.current = event.touches[0].clientY;
+  };
+
+  const handleTouchMove = (event) => {
+    const currentY = event.touches[0].clientY;
+    const diffY = currentY - startY.current;
+    if (isCardOpened && diffY > 10 && card.current.scrollTop <= 0) {
+      setIsCardOpened(false);
+    }
+  };
   const cardVariants = {
     opened: { opacity: 1, y: 0 },
     closed: { opacity: 0, y: -100, transition: { duration: 0.4 } },
@@ -42,6 +54,8 @@ export default function Card({ title, link, imgSrc }) {
         }}
         variants={cardVariants}
         onWheel={handleScroll}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
         className={`${
           isCardOpened
             ? "fixed top-0 right-0 bottom-0 left-0 max-w-[700px] m-auto  z-10 flex flex-col justify-start overflow-auto bg-[#050816] mt-[2.5rem] pb-[20%] md:pb-20 min-h-full mb-[6rem] rounded-3xl "
