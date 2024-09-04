@@ -37,10 +37,7 @@ function App() {
           <Services />
           <Experience />
           <Works />
-          <About />
-          <Tech />
-          <Feedbacks />
-          <div className="relative z-0">
+          <div className="relative z-0 mt-4">
             <Contact />
             <StarsCanvas />
           </div>

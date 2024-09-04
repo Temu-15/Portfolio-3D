@@ -56,7 +56,7 @@ export default function Experience() {
             <Tab
               label="Experience"
               sx={{
-                color: value === 0 ? "#fff" : "#b4b4b4",
+                color: value === 0 ? "#000" : "#fff",
                 display: "inline-flex",
                 justifyContent: "center",
                 alignItems: "center",

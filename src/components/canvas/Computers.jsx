@@ -154,12 +154,14 @@ const ComputerCanvas = () => {
     <Canvas
       frameloop="demand"
       shadows
+      dpr={[1, 2]}
       camera={{ position: cameraPosition, fov: 90 }} // Increased FOV for a wider view
       gl={{ preserveDrawingBuffer: true }}
       style={{ height: "500px" }}
     >
       <Suspense fallback={null}>
         <OrbitControls
+          autoRotate
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
