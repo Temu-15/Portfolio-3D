@@ -10,7 +10,7 @@ import AnimatePage from "./AnimatePage";
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-screen mx-auto mt-20 md:mt-0 flex md:row col items-center flex-wrap">
+    <section className="relative w-full min-h-screen mx-auto mt-20 md:mt-0 flex md:row col items-center flex-wrap md:flex-nowrap">
       <div
         className={` px-[9%] max-w-full h-full mx-auto flex flex-row items-start md:items-center  justify-center gap-5 flex-wrap lg:flex-nowrap  `}
       >
