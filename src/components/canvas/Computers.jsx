@@ -82,6 +82,8 @@
 import React, { useState, useEffect, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { MoonLoader } from "react-spinners";
+import { divide } from "lodash";
 
 const Computers = ({ scale, position }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
@@ -156,16 +158,11 @@ const ComputerCanvas = () => {
       className="w-full h-full "
       style={{ height: "500px" }}
     >
-      <Suspense fallback={null}>
+      <Suspense fallback={<MoonLoader />}>
         <OrbitControls
-          // enableZoom={false}
-          // maxPolarAngle={Math.PI / 2}
-          // minPolarAngle={Math.PI / 2}
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
-          // enableDamping={true}
-          // dampingFactor={0.1}
           enablePan={true}
           enableRotate={true}
         />
