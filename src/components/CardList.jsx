@@ -1,31 +1,31 @@
 import { motion } from "framer-motion";
 import Card from "./Card/Card";
-import temy from "../../public/images/temu-15.github.io_Fashion-Website_(Nest Hub Max)jl.png";
+import fashionImage from "../../public/images/temu-15.github.io_Fashion-Website_(Nest Hub Max)jl.png";
+import ClouderImage from "../../public/images/temu-15.github.io_cloud-hosting-web_(Nest Hub Max) (2) 01.png";
+import SpotifyImage from "../../public/images/localhost_5173_(Nest Hub Max) (2).png";
 const CardList = () => {
   const cardData = [
     {
-      title: "Landscape With Boats",
-      author: "Izaak van Oosten",
-      imgSrc:
-        "https://3.bp.blogspot.com/-zQ3ggObYPTE/WKgvinPtTuI/AAAAAAABous/-tbobfCQgK4fnB_FQAdCJoN6DlGhdryaACLcB/s1600/Oosten-Izaak-van-Landscape-with-Boats-1650s-oil-on-copper-Prado.jpg",
+      title: "Fashion Website",
+      imgSrc: fashionImage,
+      link: "https://temu-15.github.io/Fashion-Website/",
     },
     {
-      title: "Mona Lisa",
-      author: "Leonardo da Vinci",
-      imgSrc:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/540px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
+      title: "Clouding Website",
+      imgSrc: ClouderImage,
+      link: "https://temu-15.github.io/cloud-hosting-web/",
     },
     {
-      title: "Salvador Dali",
-      author: "The Persistence of Memory",
-      imgSrc: temy,
+      title: "Spotify clone",
+      imgSrc: SpotifyImage,
+      link: "https://github.com/Temu-15/spotify-clone-web-application",
     },
   ].map((cardObj, index) => {
     return (
       <Card
         key={`card-${index}`}
         title={cardObj.title}
-        author={cardObj.author}
+        link={cardObj.link}
         imgSrc={cardObj.imgSrc}
       />
     );
