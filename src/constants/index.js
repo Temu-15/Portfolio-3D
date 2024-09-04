@@ -127,8 +127,12 @@ const technologies = [
 ];
 export const navLinks = [
   {
-    id: "about",
-    title: "About",
+    id: "services",
+    title: "Services",
+  },
+  {
+    id: "experience",
+    title: "experience",
   },
   {
     id: "works",
@@ -137,10 +141,6 @@ export const navLinks = [
   {
     id: "contact",
     title: "Contact",
-  },
-  {
-    id: "services",
-    title: "Services",
   },
 ];
 

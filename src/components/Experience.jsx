@@ -15,7 +15,10 @@ export default function Experience() {
   };
 
   return (
-    <section className="w-full mx-auto px-[9%] xl:py-0   py-12 min-h-[80vh]">
+    <section
+      className="w-full mx-auto px-[9%] xl:py-0   py-12 min-h-[80vh]"
+      id="experience"
+    >
       <AnimatePage />
       <Box
         sx={{
