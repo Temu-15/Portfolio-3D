@@ -158,9 +158,16 @@ const ComputerCanvas = () => {
     >
       <Suspense fallback={null}>
         <OrbitControls
+          // enableZoom={false}
+          // maxPolarAngle={Math.PI / 2}
+          // minPolarAngle={Math.PI / 2}
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
+          enableDamping={true}
+          dampingFactor={0.1}
+          enablePan={true}
+          enableRotate={true}
         />
         <Computers scale={scale} position={position} />
       </Suspense>
