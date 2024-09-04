@@ -4,7 +4,7 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import AnimatePage from "./AnimatePage";
 
-import { experiences, education, technologies } from "../constants";
+import { experiences, education, technologies, about } from "../constants";
 import { motion } from "framer-motion";
 
 export default function Experience() {
@@ -219,7 +219,37 @@ export default function Experience() {
               </div>
             </div>
           )}
-          {value === 3 && <div>Item Four</div>}
+          {value === 3 && (
+            <div>
+              <div sx={{ width: "100%" }}>
+                <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                  <h3 className="text-4xl font-bold">{about.title}</h3>
+                  <p className="max-w-[600px] text-[#fff]/60 mx-auto xl:mx-0">
+                    {about.description}
+                  </p>
+                </div>
+                <div className="overflow-hidden py-2">
+                  <div className=" overflow-hidden group hover:overflow-auto">
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-[30px] text-center xl:text-left ">
+                      {about.info.map((item, index) => {
+                        return (
+                          <li
+                            key={index}
+                            className="flex items-center justify-center xl:justify-start gap-4 text-wrap"
+                          >
+                            <span className="text-[#fff]/60">{item.title}</span>
+                            <span className="text-[#fff] text-xl ">
+                              {item.content}
+                            </span>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </Box>
       </Box>
     </section>

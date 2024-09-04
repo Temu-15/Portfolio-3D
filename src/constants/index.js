@@ -36,6 +36,41 @@ import { RxGithubLogo } from "react-icons/rx";
 import { LuFigma } from "react-icons/lu";
 import { FaDocker } from "react-icons/fa";
 
+const about = {
+  title: "About Me",
+  description:
+    "I'm a software engineer with a passion for creating engaging and user-centric experiences.",
+  info: [
+    {
+      title: "Name",
+      content: "Temesgen Fikadu",
+    },
+    {
+      title: "Phone",
+      content: "+251 929 170 804",
+    },
+    {
+      title: "Email",
+      content: "Tamasgenfiqaadu@example.com",
+    },
+    {
+      title: "Location",
+      content: "Addis Ababa, Ethiopia",
+    },
+    {
+      title: "Experience",
+      content: "2 years",
+    },
+    {
+      title: "Freelance",
+      content: "Yes",
+    },
+    {
+      title: "Languages",
+      content: "English, Amharic , hindi , oromics",
+    },
+  ],
+};
 const technologies = [
   {
     name: "HTML 5",
@@ -226,7 +261,6 @@ const skills = {
   title: "my skills",
   description:
     "my skills description for the web development project for the website project at https:// website. Ember.com",
- 
 };
 
 const testimonials = [
@@ -330,4 +364,5 @@ export {
   projects,
   education,
   skills,
+  about,
 };
