@@ -85,6 +85,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import { MoonLoader } from "react-spinners";
 import { divide } from "lodash";
 
+extend({ Suspense, MoonLoader });
 const Computers = ({ scale, position }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
