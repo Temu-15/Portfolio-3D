@@ -80,7 +80,7 @@
 
 // export default ComputerCanvas;
 import React, { useState, useEffect, Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, extend } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import { MoonLoader } from "react-spinners";
 import { divide } from "lodash";
@@ -155,10 +155,9 @@ const ComputerCanvas = () => {
       shadows
       camera={{ position: cameraPosition, fov: 90 }} // Increased FOV for a wider view
       gl={{ preserveDrawingBuffer: true }}
-      className="w-full h-full "
       style={{ height: "500px" }}
     >
-      <Suspense fallback={<MoonLoader />}>
+      <Suspense fallback={null}>
         <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
