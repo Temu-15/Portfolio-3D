@@ -10,9 +10,9 @@ import AnimatePage from "./AnimatePage";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto mt-20 md:mt-0">
+    <section className="relative w-full min-h-screen mx-auto mt-20 md:mt-0 flex md:row col items-center flex-wrap">
       <div
-        className={` px-[9%] max-w-full h-full mx-auto flex flex-row items-center justify-center gap-5 flex-wrap lg:flex-nowrap  `}
+        className={` px-[9%] max-w-full h-full mx-auto flex flex-row items-start md:items-center  justify-center gap-5 flex-wrap lg:flex-nowrap  `}
       >
         <div className="flex flex-row items-start flex-nowrap gap-5 ">
           <div className="flex flex-col justify-center items-center mt-5 xs:hidden sm:flex">
@@ -71,9 +71,9 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        <ComputerCanvas className="z-0" />
       </div>
-      <div className="absolute xs:bottom-4 bottom-32 w-full flex justify-center items-center">
+      <ComputerCanvas className="z-0" />
+      <div className="absolute xs:bottom-4 bottom-32 w-full hidden md:flex justify-center items-center">
         <a
           href="#about"
           className="w-[35px] h-[60px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2"

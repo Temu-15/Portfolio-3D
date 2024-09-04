@@ -61,7 +61,7 @@ const ComputerCanvas = () => {
       shadows
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
-      className="overflow-visible w-full h-screen"
+      className="w-full h-full"
     >
       <Suspense>
         <OrbitControls
