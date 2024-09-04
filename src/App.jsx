@@ -23,7 +23,7 @@ function App() {
     setShouldAnimate(true);
     setTimeout(() => {
       setShouldAnimate(false);
-    }, 1500); //
+    }, 1000); //
   }, [location.hash]);
 
   return (

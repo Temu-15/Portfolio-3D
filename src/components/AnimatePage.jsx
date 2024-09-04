@@ -9,13 +9,13 @@ function AnimatePage({ children, shouldAnimate }) {
 
   const variants = {
     initial: { top: "0%", opacity: 1 },
-    animate: { top: "100%", opacity: 0.9 }, // Added slight opacity change
-    exit: { top: "0%", opacity: 1 }, // Ensure full opacity on exit
+    animate: { top: "100%", opacity: 0.9 },
+    exit: { top: "0%", opacity: 1 },
   };
 
   return (
     <>
-      {children} {/* Render content regardless of animation */}
+      {children}
       <AnimatePresence>
         {shouldAnimate && (
           <motion.div
@@ -23,16 +23,19 @@ function AnimatePage({ children, shouldAnimate }) {
             animate={{
               opacity: 0.9,
               transition: {
-                delay: 0.3, // Slightly earlier delay
-                duration: 0.6, // Slightly longer duration
-                ease: "easeInOut", // Smooth easing
+                delay: 0.1,
+                duration: 0.6,
+                ease: "easeInOut",
               },
             }}
             exit={{
               opacity: 1,
-              transition: { duration: 0.4 },
+              transition: {
+                delay: 0.1,
+                duration: 0.4,
+              },
             }}
-            className="h-screen w-screen fixed bg-primary z-50"
+            className="h-screen w-screen fixed bg-[#000] z-50"
           >
             <div className="fixed top-0 left-0 right-0 bottom-0 pointer-events-none h-screen w-screen flex ">
               {[...Array(6)].map((_, index) => (
@@ -43,9 +46,9 @@ function AnimatePage({ children, shouldAnimate }) {
                   animate="animate"
                   exit="exit"
                   transition={{
-                    duration: 0.5, // Slightly longer duration
+                    duration: 0.4,
                     ease: "easeInOut",
-                    delay: reverseIndex(index) * 0.08, // Reduced delay for faster sequence
+                    delay: reverseIndex(index) * 0.08,
                   }}
                   className="w-full h-full relative bg-[#fff]"
                 />
