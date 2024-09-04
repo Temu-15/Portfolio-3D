@@ -6,12 +6,10 @@ import CardList from "./CardList";
 const Works = () => {
   return (
     <div className="relative w-full h-full px-[9%]">
-      <header>
-        <span className="date"></span>
-        <h1>Previous workd</h1>
-        <div className="avatar">
-          <Avatar />
-        </div>
+      <header className="mb-2">
+        <h2 className="text-[45px] text-center lg:text-left capitalize">
+          Latest <span className="text-[#915eff]">Projects</span>
+        </h2>
       </header>
       <CardList />
     </div>
