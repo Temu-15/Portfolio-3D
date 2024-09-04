@@ -6,6 +6,7 @@ export default function Card({ title, link, imgSrc }) {
   const [isCardOpened, setIsCardOpened] = useState(false);
   const [cardDimensions, setCardDimensions] = useState({ width: 0, height: 0 });
   const card = useRef(null);
+  const startY = useRef(0);
   useEffect(() => {
     if (isCardOpened) {
       document.body.classList.add("overflow-hidden");
