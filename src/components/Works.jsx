@@ -5,7 +5,7 @@ import CardList from "./CardList";
 
 const Works = () => {
   return (
-    <div className="relative w-full h-full px-[9%]">
+    <div className="relative w-full h-full px-[9%]" id="works">
       <header className="mb-3">
         <h2 className="text-[45px] text-center lg:text-left capitalize">
           Latest <span className="text-[#915eff]">Projects</span>
