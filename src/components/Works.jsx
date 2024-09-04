@@ -7,8 +7,8 @@ const Works = () => {
   return (
     <div className="relative w-full h-full px-[9%]">
       <header>
-        <span className="date">Tuesday, August 13th</span>
-        <h1>Today</h1>
+        <span className="date"></span>
+        <h1>Previous workd</h1>
         <div className="avatar">
           <Avatar />
         </div>

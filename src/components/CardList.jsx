@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Card from "./Card/Card";
-
+import temy from "../../public/images/temu-15.github.io_Fashion-Website_(Nest Hub Max)jl.png";
 const CardList = () => {
   const cardData = [
     {
@@ -18,8 +18,7 @@ const CardList = () => {
     {
       title: "Salvador Dali",
       author: "The Persistence of Memory",
-      imgSrc:
-        "https://cdn.britannica.com/10/182610-050-77811599/The-Persistence-of-Memory-canvas-collection-Salvador-1931.jpg",
+      imgSrc: temy,
     },
   ].map((cardObj, index) => {
     return (
@@ -37,7 +36,7 @@ const CardList = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1 }}
-      className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+      className="relative block w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
       // className="flex flex-wrap content-start"
     >
       {cardData}

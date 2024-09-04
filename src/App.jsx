@@ -87,12 +87,11 @@ function App() {
             <Navbar />
             <Hero />
           </div>
-
           <Services />
           <Experience />
+          <Works />
           <About />
           <Tech />
-          <Works />
           <Feedbacks />
           <div className="relative z-0">
             <Contact />

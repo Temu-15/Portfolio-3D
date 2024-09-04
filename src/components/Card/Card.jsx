@@ -20,40 +20,47 @@ export default function Card({ title, author, imgSrc }) {
             });
           }
         }}
-        className={`h-full w-full ${
+        className={` ${
           isCardOpened
-            ? "fixed top-0 right-0 bottom-0 left-0 m-auto  mx-10 z-10 mt-10 mb-10 flex flex-col justify-start overflow-auto bg-[##050816]"
-            : "max-h-[250px]"
+            ? "fixed top-0 right-0 bottom-0 left-0 max-w-[700px] m-auto  z-10 flex flex-col justify-start overflow-auto bg-[#050816] mt-[2.5rem] rounded-3xl"
+            : "w-full h-full"
         }`}
       >
         <motion.img
           layout="scale"
           src={imgSrc}
-          className="w-full h-full contain"
+          className={`${
+            isCardOpened
+              ? "w-full h-[420px] object-cover"
+              : " w-full h-full max-h-[300px] object-cover rounded-3xl"
+          }`}
           alt={title}
         />
-        <motion.h2
-          layout="position"
-          className={`text-3xl font-bold my-2 ${
-            isCardOpened ? "text-white" : "text-primary "
-          }`}
-        >
-          {title}
-        </motion.h2>
-        <motion.p
-          layout="position"
-          className={`font-bold text-2xl mb-4 ${
-            isCardOpened ? "text-[#121212]" : "text-subtitle"
-          }`}
-        >
-          {author}
-        </motion.p>
+
+        <div className="absolute top-0 left-0 p-4">
+          <motion.h2
+            layout="position"
+            className={`text-3xl font-bold mb-2 ${
+              isCardOpened ? "text-[#fff]" : "text-primary "
+            }`}
+          >
+            {title}
+          </motion.h2>
+          <motion.p
+            layout="position"
+            className={`font-bold text-xl ${
+              isCardOpened ? "text-[#121212]" : "text-[#121414]"
+            }`}
+          >
+            {author}
+          </motion.p>
+        </div>
 
         {isCardOpened && (
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="font-light text-xl text-white"
+            className="p-[35px] w-[90%] text-[#9d9ca1] font-normal text-[20px] leading-5"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -77,7 +84,7 @@ export default function Card({ title, author, imgSrc }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             onClick={() => setIsCardOpened(false)}
-            className="fixed top-0 right-0 bottom-0 left-0 z-9 bg-black bg-opacity-70"
+            className="fixed top-0 right-0 bottom-0 left-0 z-1 bg-black bg-opacity-60 max-w-[990px]"
           />
         </Fragment>
       )}
